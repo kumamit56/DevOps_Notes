@@ -1,0 +1,7 @@
+DevOps Notes
+GIt & GitHub
+Shell Scripting
+Jenkins
+kubernetes
+ansible
+Aws Cloud
