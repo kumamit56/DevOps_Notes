@@ -1,0 +1,6 @@
+Ques:-4. What is the difference between local & remote repositories? How to connect locally remotely?
+Ans:-
+         Git local repository is, that will be present inside your local machine.Git Remote repository
+	 is, that where we stored the local repository in our local machines.
+	 
+
