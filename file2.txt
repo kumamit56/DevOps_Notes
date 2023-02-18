@@ -1,0 +1,19 @@
+Ques:- What is the difference between Git and GitHub?
+Ans:-
+       While Git is a tool that’s used to manage multiple versions of source code edits 
+       that are then transferred to files in a Git repository, GitHub is a UI that serves
+       as a location for uploading copies of a Git repository.
+
+Ques:-  What is the difference Between Main Branch and Master Branch?
+Ans:- 
+        Previously, the name of the default branch of any repository was “master”. 
+	But from October 2020 onward, the default branch of any GitHub repository 
+	is using “main” as the default branch name, instead of master. 
+
+Ques:-  Why Git is important?
+Ans:-
+        While talking about Git, the biggest advantage of Git is its branching capabilities. 
+	Moreover, it is distributed version control system, which makes it more scalable. All
+	the developers can work from their remote locations and contribute to the same piece of code.
+
+	
