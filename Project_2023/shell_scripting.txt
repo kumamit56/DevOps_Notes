@@ -1,0 +1,11 @@
+Assigment:-
+
+           Write a Shell script to Show these details:
+
+          -> Welcome the user, with greetings to his/her username
+          -> Show the date and time 
+          -> Show the uptime of the server and the last logins
+          -> Show the disk space and RAM utilization
+          -> Show the top CPU processes
+          -> Add more beautification and commands if you know them
+          -> Post it on LinkedIn with Screenshots
