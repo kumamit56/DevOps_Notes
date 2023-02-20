@@ -7,18 +7,18 @@ Ans:-   In the current project we use the following tools orchestrated with Jenk
 
 1. Code Commit: Developers commit code changes to a Git repository hosted on GitHub.
 2. Jenkins Build: Jenkins is triggered to build the code using Maven. Maven builds the code and runs unit tests
-3. Code Analysis: Sonar is used to perform static code analysis to identify any code quality issues, security v   ulnerabilities, and bugs.
-4. Security Scan: AppScan is used to perform a security scan on the application to identify any security vulner   abilities.
-5. Deploy to Dev Environment: If the build and scans pass, Jenkins deploys the code to a development environmen   t managed by Kubernetes.
-6. Continuous Deployment: ArgoCD is used to manage continuous deployment. ArgoCD watches the Git repository and   automatically deploys new changes to the development environment as soon as they are committed.
+3. Code Analysis: Sonar is used to perform static code analysis to identify any code quality issues, security vulnerabilities, and bugs.
+4. Security Scan: AppScan is used to perform a security scan on the application to identify any security vulner abilities.
+5. Deploy to Dev Environment: If the build and scans pass, Jenkins deploys the code to a development environment managed by Kubernetes.
+6. Continuous Deployment: ArgoCD is used to manage continuous deployment. ArgoCD watches the Git repository and automatically deploys new changes to the development      environment as soon as they are committed.
 7. Promote to Production: When the code is ready for production, it is manually promoted using ArgoCD to the pr   oduction environment.
 8. Monitoring: The application is monitored for performance and availability using Kubernetes tools and other m   onitoring tools.
 
 Ques:-  What are the different ways to trigger jenkins pipelines?
 Ans:-   This can be done in multiple ways, To briefly explain about the different options-
-
-  - Poll SCM: Jenkins can periodically check the repository for changes and automatically build if changes are               detected. This can be configured in the "Build Triggers" section of a job.
-              
-  - Build Triggers: Jenkins can be configured to use the Git plugin, which allows you to specify a Git reposito                    ry and branch to build.The plugin can be configured to automatically build when changes are                    pushed to the repository.    
-  - Webhooks: A webhook can be created in GitHub to notify Jenkins when changes are pushed to the repository. 
-              Jenkins can then automatically build the updated code. This can be set up in the "Build Triggers"              section of a job and in the GitHub repository settings.
+       - Poll SCM: Jenkins can periodically check the repository for changes and automatically build if changes are detected. This can be configured in the 
+         "Build Triggers" section of a job.
+        - Build Triggers: Jenkins can be configured to use the Git plugin, which allows you to specify a Git repository and branch to build.The plugin can be                     configured to automatically build when changes are pushed to the repository.    
+        - Webhooks: A webhook can be created in GitHub to notify Jenkins when changes are pushed to the repository. 
+          Jenkins can then automatically build the updated code. This can be set up in the "Build Triggers" section
+	  of a job and in the GitHub repository settings.
