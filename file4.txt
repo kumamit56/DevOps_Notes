@@ -32,9 +32,24 @@ Ans:-   This can be done in multiple ways, To briefly explain about the differen
               Jenkins can then automatically build the updated code. This can be set up in the "Build Triggers"              section of a job and in the GitHub repository settings.
 
 
-Ques:-  Q: What is JNLP and why is it used in Jenkins ?
+Ques:- What is JNLP and why is it used in Jenkins ?
 
 Ans:- In Jenkins, JNLP is used to allow agents (also known as "slave nodes") to be launched and managed              remotelyby the Jenkins master instance. This allows Jenkins to distribute build tasks to multiple agents,      providing  scalability and improving performance.
       When a Jenkins agent is launched using JNLP, it connects to the Jenkins master and receives build tasks,       which it then executes. The results of the build are then sent back to the master and displayed in the
-      Jenkins user interface.	      
->>>>>>> 61fed3d (added change)
+      Jenkins user interface.
+     
+ Ques:-Benefits of CI/CD
+  Ans:- The benefits of CI/CD can be summarized as follows:
+        1. Faster time to market: Automated builds, testing, and deployment allow for faster
+           delivery of new features and bug fixes to the end-users.
+        2. Improved quality: Regular testing and integration of code changes help identify
+           and fix issues early in the development process.
+        3. Increased collaboration: CI/CD promotes collaboration between developers, QA,
+           and operations, enabling them to work more effectively together.    
+        4. Reduced risk: Automated testing and deployment reduce the risk of human error
+           and ensure consistent, repeatable processes.
+        5. Increased efficiency: Automated CI/CD pipelines can save time and effort
+           compared to manual processes, freeing up resources for other tasks.
+        6. In simple terms, CI/CD helps make software development faster, more reliable, and
+           more efficient by automating the build, test, and deployment processes.
+
