@@ -110,6 +110,32 @@ Ans:- In Jenkins, JNLP is used to allow agents (also known as "slave nodes") to 
          build will have its own log files which can be accessed from the build page, click on the
          build number > Console Output. If you need access to the logs outside of the Jenkins
          UI, they can typically be found in the JENKINS_HOME/logs directory on the Jenkins
-         server.	    
+         server.
+
+ Ques:- How will you handle secrets?
+  Ans:- Handling secrets, such as passwords, API keys, and confidential information, is a
+        critical aspect of automation.
+        There are ways to handle secrets in Jenkins:
+        1. Jenkins Credentials: Jenkins provides a built-in credentials system where you
+           can store secrets and retrieve them as needed within your pipelines. You can use
+           the credentials plugin to manage and secure these secrets.
+        2. Environment Variables: You can also store secrets as environment variables and
+           access them within your pipelines. This is useful when secrets need to be passed
+           to build agents or used in shell scripts. 
+
+   Ques:- Explain diff stages in CI-CD setup
+   Ans:-  Continuous Integration (CI) and Continuous Delivery (CD) are software development
+          practices that aim to automate and streamline the software delivery process. 
+          The following are the common stages involved in a CI/CD setup:
+         1. Code Development: This is the stage where developers write code and commit it
+            to a version control system like Git.
+         2. Code Build: Jenkins or another CI tool is used to build the code, compile it, and
+            run tests to ensure that the code is working as expected.
+
+         3. Code Test: The code is tested using various testing techniques such as unit
+            testing, integration testing, and functional testing to ensure that it meets the
+            required quality standards.
+         4. Code Deploy: The code is deployed to a staging environment for further testing,
+            or to a production environment if it meets the required quality standards
 
 
