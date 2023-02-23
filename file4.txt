@@ -53,3 +53,63 @@ Ans:- In Jenkins, JNLP is used to allow agents (also known as "slave nodes") to 
         6. In simple terms, CI/CD helps make software development faster, more reliable, and
            more efficient by automating the build, test, and deployment processes.
 
+  Ques:- what is meant by CI-CD?
+   Ans:- CI/CD is the combined practice of continuous integration (CI) with continuous delivery or
+         continuous deployment (CD). The purpose of CI/CD is to allow development teams to
+         deliver code changes more frequently and reliably by automating the build, test, and
+         deployment processes.
+
+ Ques:- What is Jenkins Pipeline?
+  Ans:- Jenkins Pipeline is a suite of plugins that allows creating simple-to-complex build
+        pipelines as code. It is a powerful way to automate the build, test, and deployment
+        process of a software application. The pipelines are defined using a Groovy-based
+        domain-specific language (DSL), which is easy to understand for both developers and
+        non-developers alike.
+        A Jenkins Pipeline consists of multiple stages, each representing a specific step in the
+        software development process, such as building the code, running tests, and deploying
+        the application. Each stage is defined using a series of steps, and the pipelines can be
+        visualized and executed from within the Jenkins web interface.
+	
+ Ques:-	How do you configure the job in Jenkins?
+ Ans:-  To configure a job in Jenkins, you need to perform the following steps:
+        1.Launch the Jenkins web interface: Open your web browser and navigate to the
+          URL of your Jenkins server.
+        2. Log in to Jenkins.
+        3.  Click on "New Item" in the left navigation menu: This will create a new job in
+            Jenkins.
+        4.  Enter a name for the job: In the "Item name" field, enter a name for your job
+        5.  Choose a job type: Jenkins supports various job types, including Freestyle
+            projects, Maven projects, Pipeline projects, etc. Choose the type that best fits
+            your needs.
+        6.  Configure the job: Based on the type of job you selected, you will need to
+            configure various settings, such as the source code repository, build triggers,
+            build steps, build notifications, etc.
+        7.  Save the job: After configuring the job, click on the "Save" button to save the job
+            configuration.
+	8.  Build the job: You can now build the job by clicking on the "Build Now" button in
+            the left navigation menu.
+            These are the basic steps for configuring a job in Jenkins.
+ 
+ Ques:-  Where do you find errors in Jenkins?
+ Ans:-   Errors in Jenkins can be found in several places:
+         1. Build console output: The build console output provides a detailed log of the
+            build process, including any errors or warnings that may have occurred. You can
+            access the build console output by clicking on a build number in the job's
+            dashboard.
+         2. Jenkins logs: Jenkins generates various log files that can be used to diagnose
+            issues and debug errors. You can access these logs from the "Manage Jenkins"
+            > "System Log" page.
+         3. Pipeline visualization: If you are using Jenkins Pipelines, the pipeline
+            visualization provides a graphical representation of the build process. Any errors
+            or failures in the pipeline will be indicated by a red dot or other visual cues.
+            In general, the build console output and Jenkins logs are the most important places to
+            look for errors in Jenkins.
+
+  Ques:- In Jenkins how can you find log files?
+  Ans:-  Log files in Jenkins can be found at Manage Jenkins > System Log. Additionally, each
+         build will have its own log files which can be accessed from the build page, click on the
+         build number > Console Output. If you need access to the logs outside of the Jenkins
+         UI, they can typically be found in the JENKINS_HOME/logs directory on the Jenkins
+         server.	    
+
+
