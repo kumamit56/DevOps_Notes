@@ -1,0 +1,106 @@
+MOST IMPORTANT INTERVIEW QUESTIONS ON AWS
+
+Ques:-1 5 Aws services name you have used and what’s the use cases?
+ Ans:- 
+A. Amazon S3: Object storage service used to store and retrieve any amount of data from anywhere
+   on the web. Used for hosting static websites, backup and archiving, and data lakes.
+
+B. Amazon EC2: Virtual server instances used to run applications on the cloud. Used for web and 
+   mobile applications, big data processing, and hosting databases.
+
+C. Amazon RDS: Managed relational database service used to set up, operate, and scale a 
+   relational database in the cloud. Used for hosting MySQL, PostgreSQL, Oracle, SQL Server, 
+   and MariaDB databases.
+
+D. Amazon CloudFront: Content delivery network used to deliver data, videos, applications, and
+   APIs to customers globally with low latency and high transfer speeds. Used for streaming media,    dynamic content, and accelerated content delivery.
+
+E. Amazon SES: Email service used to send and receive email using a scalable and cost-effective 
+   cloud infrastructure. Used for transactional email, marketing campaigns, and automated email 
+   communications.
+
+Ques:-2 What are the tools used to send logs to the cloud environment?
+ Ans:-
+        There are several tools that can be used to send logs to the cloud environment, including 
+	Amazon CloudWatch Logs, AWS CloudTrail, and AWS Elastic Beanstalk. Other popular logging
+	and monitoring tools include Splunk, Logstash, and Fluentd.
+
+Ques:-3 What are IAM Roles? How do you create /manage them?
+ Ans:-  
+        IAM roles are a secure way to grant permissions to entities that you trust, such as AWS
+        services, applications, or AWS Identity & Access Management(IAM) users. Roles eliminate            the need to share long-term access keys, making them a more secure and flexible way to
+	control access to AWS resources. To create and manage IAM roles, you can use the AWS 
+	Management Console, AWS CLI, or AWS SDKs.
+
+Ques:-4 How to upgrade or downgrade a system with zero downtime?
+ Ans:-  
+        To upgrade or downgrade a system with zero downtime, you can use techniques such as
+	blue-green deployment, rolling deployment, or canary deployment.These techniques involve
+	creating a duplicate environment, deploying the updated version to the duplicate
+	environment, and gradually shifting traffic from the old environment to the new one.
+
+Ques:-5 What is infrastructure as code and how do you use it?
+ Ans:-  
+        Infrastructure as code (IaC) is the practice of managing and provisioning infrastructure
+	using code rather than manual processes. IaC tools such as AWS CloudFormation, AWS CDK, and        Terraform enable developers to define infrastructure as code using a high-level language,          version control the code, and automate the deployment and management of infrastructure.
+	This approach helps to improve consistency, reduce errors, and increase agility.
+
+Ques:-6 What is a load balancer? Give scenarios of each kind of balancer based on your experience.
+ Ans:-  
+        A load balancer is a device or software that distributes network traffic across multiple
+	servers to ensure that no single server is overwhelmed with traffic. There are several
+	types of load balancers, including:-
+
+        1. Application Load Balancer(ALB):- used to route HTTP/HTTPS traffic to specific endpoints            based on path, host, or query string.
+	
+        2. Network Load Balancer(NLB):- used to handle TCP and UDP traffic at the transport layer,            providing low latency and high throughput for applications.
+  
+        3. Classic Load Balancer(CLB):- used to distribute traffic across multiple instances in 
+	   one or more Availability Zones, supporting both HTTP and TCP traffic.
+
+Ques:-7 What is CloudFormation and why is it used for?
+ Ans:-  AWS CloudFormation is a service that helps to model and provision AWS resources using 
+        templates. With CloudFormation, you can create a collection of resources in a single,
+	automated, and repeatable way. This helps to improve consistency, reduce errors, and 
+	increase agility when deploying infrastructure in the cloud.
+
+Ques:-8 Difference between AWS CloudFormation and AWS Elastic Beanstalk?
+ Ans:-  
+        AWS CloudFormation is a service that helps to model and provision AWS resources using
+	templates. With CloudFormation, you can create a collection of resources in a single,
+	automated, and repeatable way. This helps to improve consistency, reduce errors, and 
+	increase agility when deploying infrastructure in the cloud.
+
+Ques:-9 What are the kinds of security attacks that can occur on the cloud? And how can 
+        we minimize them?
+ Ans:-
+        There are various types of security attacks that can occur on the cloud, including:
+  
+    --->DDoS attacks:- These can occur when a large number of requests flood a server or network,
+                       rendering it inaccessible to legitimate traffic.
+    --->Malware attacks:- Malicious software can be introduced into the cloud environment through
+                          a variety of vectors, including email attachments, infected files, and
+			  compromised user accounts.
+    --->Data breaches:- Unauthorized access to sensitive data stored in the cloud can occur when
+                        security controls are not properly implemented or user credentials are
+			compromised.
+    --->Insider threats:- This type of attack occurs when a user with authorized access to the
+                          cloud environment intentionally or unintentionally causes harm.
+
+   To minimize security risks on the cloud, you can take the following steps:
+
+   --->Ensure that you are using strong, unique passwords for all user accounts, and enable
+       multi-factor authentication wherever possible.
+   --->Keep your cloud environment updated with the latest security patches and updates.
+   --->Implement network segmentation to reduce the potential impact of an attack.
+   --->Encrypt sensitive data both at rest and in transit.
+   --->Regularly audit your cloud environment to identify any vulnerabilities or areas for
+       improvement.
+
+ Ques:-10 Can we recover the EC2 instance when we have lost the key?
+  Ans:-
+          If you have lost the key to an EC2 instance, you can still recover the instance by
+	  creating a new key pair and then attaching the new key pair to the instance. Once
+	  the new key pair is attached, you can log in to the instance using the new key and 
+	  recover any data that was previously stored on the instance.
+
