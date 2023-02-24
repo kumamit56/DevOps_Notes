@@ -13,7 +13,7 @@ C. Amazon RDS: Managed relational database service used to set up, operate, and 
    and MariaDB databases.
 
 D. Amazon CloudFront: Content delivery network used to deliver data, videos, applications, and
-   APIs to customers globally with low latency and high transfer speeds. Used for streaming media,    dynamic content, and accelerated content delivery.
+   APIs to customers globally with low latency and high transfer speeds. Used for streaming media     dynamic content, and accelerated content delivery.
 
 E. Amazon SES: Email service used to send and receive email using a scalable and cost-effective 
    cloud infrastructure. Used for transactional email, marketing campaigns, and automated email 
@@ -28,9 +28,9 @@ Ques:-2 What are the tools used to send logs to the cloud environment?
 Ques:-3 What are IAM Roles? How do you create /manage them?
  Ans:-  
         IAM roles are a secure way to grant permissions to entities that you trust, such as AWS
-        services, applications, or AWS Identity & Access Management(IAM) users. Roles eliminate            the need to share long-term access keys, making them a more secure and flexible way to
-	control access to AWS resources. To create and manage IAM roles, you can use the AWS 
-	Management Console, AWS CLI, or AWS SDKs.
+        services, applications, or AWS Identity & Access Management(IAM) users. Roles eliminate             the need to share long-term access keys, making them a more secure and flexible way to
+	 control access to AWS resources. To create and manage IAM roles, you can use the AWS 
+	 Management Console, AWS CLI, or AWS SDKs.
 
 Ques:-4 How to upgrade or downgrade a system with zero downtime?
  Ans:-  
@@ -42,8 +42,11 @@ Ques:-4 How to upgrade or downgrade a system with zero downtime?
 Ques:-5 What is infrastructure as code and how do you use it?
  Ans:-  
         Infrastructure as code (IaC) is the practice of managing and provisioning infrastructure
-	using code rather than manual processes. IaC tools such as AWS CloudFormation, AWS CDK, and        Terraform enable developers to define infrastructure as code using a high-level language,          version control the code, and automate the deployment and management of infrastructure.
-	This approach helps to improve consistency, reduce errors, and increase agility.
+	using code rather than manual processes. IaC tools such as AWS CloudFormation, AWS CDK 
+	 & Terraform enable developers to define infrastructure as code using a high-level 
+	 language, version control the code, and automate the deployment and management of 
+	 infrastructure.This approach helps to improve consistency, reduce errors, and increase 
+	 agility.
 
 Ques:-6 What is a load balancer? Give scenarios of each kind of balancer based on your experience.
  Ans:-  
@@ -51,9 +54,11 @@ Ques:-6 What is a load balancer? Give scenarios of each kind of balancer based o
 	servers to ensure that no single server is overwhelmed with traffic. There are several
 	types of load balancers, including:-
 
-        1. Application Load Balancer(ALB):- used to route HTTP/HTTPS traffic to specific endpoints            based on path, host, or query string.
+        1. Application Load Balancer(ALB):- used to route HTTP/HTTPS traffic to specific 
+	   endpoints based on path, host, or query string.
 	
-        2. Network Load Balancer(NLB):- used to handle TCP and UDP traffic at the transport layer,            providing low latency and high throughput for applications.
+        2. Network Load Balancer(NLB):- used to handle TCP and UDP traffic at the transport 
+	   layer, providing low latency and high throughput for applications.
   
         3. Classic Load Balancer(CLB):- used to distribute traffic across multiple instances in 
 	   one or more Availability Zones, supporting both HTTP and TCP traffic.
@@ -103,4 +108,14 @@ Ques:-9 What are the kinds of security attacks that can occur on the cloud? And 
 	  creating a new key pair and then attaching the new key pair to the instance. Once
 	  the new key pair is attached, you can log in to the instance using the new key and 
 	  recover any data that was previously stored on the instance.
+
+Ques:-11  Do you prefer to host a website on S3? What’s the reason if your answer is either 
+          yes or no?
+  Ans:- 	  
+         Hosting a website on S3 can be a good option for static websites that do not require
+	 server-side processing. S3 is highly scalable, has low latency, and can handle high 
+	 traffic volumes. Additionally, hosting a website on S3 can be cost-effective, as you 
+	 only pay for the storage and data transfer that you use. However, if your website 
+	 requires server-side processing or a content management system, you may want to consider 
+	 other hosting options, such as EC2 or a managed service like Lightsail.	  
 
