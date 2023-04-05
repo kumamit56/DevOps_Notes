@@ -1,1 +1,179 @@
+ ---------------->>>>>>>>  DOCKER INTERVIEW QUESTIONS <<<---------------------
+
+ 1. What is Docker.?
+Docker is an open-source containerization platform and it is used to manage the lifecycle of containers.
+I use Docker to basically build the Docker images then write some Docker files run some Docker containers push them to registries.
+
+2. What are the benefits of using Docker?
+Docker provides several benefits, such as increased efficiency, portability, scalability, and security. It also simplifies the process of building, 
+testing, and deploying applications.
+
+3. How do you create a Docker container?
+To create a Docker container, you need to create a Docker file that defines the container’s configuration, build the image using the Docker build command, 
+and then run the image using the Docker run command.
+
+4. What is a Docker image?
+A Docker image is a lightweight, standalone, executable package that contains everything needed to run an application, including the code, libraries, and dependencies.
+
+5. What is the difference between a Docker image and a container?
+A Docker image is a template or blueprint for a container, whereas a container is a running instance of an image. Images are static, while containers are dynamic.
+
+6. How Containers are different from virtual machines.?
+containers are very lightweight in nature because they don’t have complete operating system but they have very minimal system dependencies that are required 
+to run your application.
+- we install a Docker and on top of it we create a containers, whereas in case of virtual machines once you install hypervisor on top of which 
+you have a virtual machines but it has a complete guest operating system and we all know operating systems are very heavy, and you know with having 
+an os the image size goes very high.
+- where as when you’re talking about a container it is basically a combination of your application, application dependencies and some system libraries.
+— for example, lets say I’m running a java application so what would I need is I need my application I need some java runtime dependency to run the java 
+application and I just need some system libraries that are the only three things that you require and containers are basically defined to have this very 
+lightweight nature. Whereas in virtual machine, let’s say you created ubuntu so you will install the java you i’ll have the complete ubuntu OS, you will 
+have the kernel and you have all the system libraries. Whereas in containers you only have the concept of shared libraries that’s the difference between 
+containers and virtual machines.
+
+7. What is Docker life cycle?
+In my case what I usually do is I start with writing a docker file, in the docker file I will write the set of instructions that are required to run the 
+application and once I feel that the docker file is complete I will create an image out of it that you can do using the docker CLI. You can create by 
+running docker build which will convert your docker file to docker image and after that you can again use docker run command to execute your container. 
+Finally you can push your image to external registries like Docker hub.
+
+8. What are the different docker components?
+we have a client and we have docker daemon and then we have docker registry.
+docker Client is nothing but where you run your docker commands. docker daemon is that it listens the requests from docker client and creates images containers 
+networks and volumes.Docker registry is used to stores docker images.
+
+9. What is the difference between docker COPY and docker ADD?
+Docker ADD command is used to copy a files from specific URL. ADD command is used for downloading files from remote server.
+For example, when you want to download a specific package from internet using Wget or curl so in such cases we use docker ADD.
+COPY is basically used to copy the file from host machine to container.
+For example, let’s say you want to copy a file from your laptop or from your Ec2 instance into the containers in such cases we use COPY.
+
+10. What is the difference between CMD and ENTRYPOINT in Dokcer?
+function or the executable which should not be overwritten should always be passed as an entry point. And the parameters that can be overwritten or any fields 
+that can be configured that should be passed using the CMD.You can either use one of them or you can use a combination of both of them.
+
+for example, lets say you want to run a python related application, where you will have arguments like python manage.py followed by the Host port Url and all of these details. So here what we can do is Python and manage.py can put it in the entry point whereas the other details like what is your host URL or what is the port you can pass all of those Information in the CMD, so that whenever user doesn’t want to run it by default on the 8000 port, I want to run it on 9000 port so in such cases if you pass those things as part of your command line arguments then it will be overwritten in the CMD.
+
+11. How do you pass environment variables to a Docker container?
+You can pass environment variables to a Docker container using the -e or — env option when running the container.
+
+12. What is Docker Compose?
+Docker Compose is a tool for defining and running multi-container Docker applications.It allows you to define the services and dependencies of 
+your application in a single YAML file.This YAML file contains information about the containers that we want to launch and how they have to be linked with each other.
+
+13. What are the networking types in DOCKER and what is the default?
+The default networking in Docker is Bridge networking.
+However, we can modify this network. We can go with Bridge Network, overlay network, Host network and Mac VLAN network.
+
+14. Can you explain how to isolate networking between the containers?
+You can create your own bridge networking so using your own bridge networkings you can assign your own network to a container. We can create using docker 
+network create “secure network”. now what you can do is whenever your are running the container using docker run command you can say — network=“secure network”, 
+and when you do this the container will come up with the secure network that you have created.
+
+15. What is a multi stage build in Docker?
+Multi stage build allows you to build your docker container in multiple stages allowing you to copy artefacts from one stage to other. The major advantage of 
+this is to build light weight contianers.
+
+16. What are distro less images in Docker?
+Distroless images contain only your application and its runtime dependencies with a very minimum operating system libraries. They do not contain package managers, 
+shells or any other programs you would expect to find in a standard linux distribution.
+— They are very small and lightweight images.
+— With distroless image your application will be less exposed to security threats.
+
+17. How do you scale Docker containers?
+You can scale Docker containers using the Docker Swarm or Kubernetes orchestration tools. These tools allow you to manage and scale containers across multiple nodes.
+
+18. What is Docker Swarm?
+Docker Swarm is a orchestration tool for Docker. It allows you to manage and scale Docker containers across multiple hosts.
+
+19. What is Kubernetes?
+Kubernetes is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications.
+
+20. How do you troubleshoot a Docker container?
+You can troubleshoot a Docker container by inspecting the logs using the Docker logs command, attaching to the container using the Docker attach command, or 
+running commands inside the container using the Docker exec command.
+
+21. How do you backup and restore Docker containers?
+To backup a Docker container, you can create a Docker image of the container using the Docker commit command. 
+To restore a container from a backup, you can create a new container from the backed-up image using the Docker run command.
+
+Some Scenario based questions:
+
+22. Real time Challenges with Docker?
+— Docker is a single daemon process. Which can cause a single point of failure, if the docker daemon goes down for some reason all the application are down.
+— Docker Daemon runs as a root user. Which is a security threat. Any process running as a root can have adverse effects. When it is comprised for security 
+reasons, it can impact other applications or containers on the host.
+— Resource Constraints: if you are running too many containers on a single host, you may experience issues with resource constraints. 
+This can result in slow performance or crashes.
+
+23. What steps would you take to secure containers?
+Some of the steps,
+— Use distro less or images with not too many packages as your final image in multi stage build, so that there is less chance of security issues.
+— Ensure that the networking is configured properly. This is one of the most common reasons for security issues. If required configure custom bridge 
+networks and assign them to isolate containers.
+— Use utilities like sync to scan your container images.
+
+24. In what real scenarios have you used Docker?
+— Developing and testing applications
+— Deploying applications in production
+— Building and deploying micro services
+— Continuous integration and delivery
+— Automated testing
+— Serverless architecture
+
+25. You want to create a Docker image for a Python application. How would you do it?
+To create a Docker image for a Python application, you can use a Dockerfile. First, you need to create a Dockerfile that specifies the base image, 
+installs any necessary dependencies, and copies the Python application files into the container. Then, you can build the image using the “docker build” command.
+
+26. You have a Docker container running a web server and you want to access the web server from your host machine. How would you do it?
+To access the web server running inside a Docker container, you need to map the container’s port to a port on the host machine using the “-p” option 
+when you start the container. For example, if the web server is running on port 80 inside the container, you can use the command “docker run -p 80:80 [image]” 
+to map port 80 in the container to port 80 on the host machine.
+
+27. You have a Docker container running a database and you want to persist the data even if the container is removed or restarted. How would you do it?
+To persist data in a Docker container, you can use Docker volumes. You can create a volume using the “docker volume create” command and then mount the 
+volume to the container using the “-v” or “- -mount” option when you start the container.
+
+28. You want to run multiple instances of a Docker container to handle increased traffic. How would you do it?
+To scale Docker containers, you can use Docker Compose or Docker Swarm. With Docker Compose, you can define a “service” that specifies the number of replicas 
+you want to run and then use the “docker-compose up” command to start the containers. With Docker Swarm, you can use the “docker service create” command to 
+create a service and specify the number of replicas you want to run.
+
+29. You want to deploy a Docker container to a remote server. How would you do it?
+To deploy a Docker container to a remote server, you can use Docker Machine to create a new Docker host on the remote server and then use Docker Compose or 
+Docker Swarm to deploy the container to the new host. Alternatively, you can use a container registry like Docker Hub to store the Docker image and then use 
+the “docker pull” command on the remote server to download the image and run it as a container.
+
+30. You want to monitor the performance of a Docker container. How would you do it?
+To monitor the performance of a Docker container, you can use tools like Docker Stats or Docker Inspect. Docker Stats provides real-time information on 
+container resource usage, while Docker Inspect provides more detailed information about a container, including its configuration and network settings. 
+You can also use third-party monitoring tools like Prometheus or Grafana to monitor Docker containers.
+
+31. You have a Docker container running a web server and you want to update the code without stopping the container. How would you do it?
+To update the code running in a Docker container without stopping it, you can use a bind mount or a Docker volume to mount the code directory from the 
+host machine to the container. This will allow you to make changes to the code on the host machine and see the changes immediately in the container.
+
+32. You have a Docker container running a Node.js application and you want to debug the application. How would you do it?
+To debug a Node.js application running in a Docker container, you can use the Node.js debugger or a third-party debugger like VS Code. 
+You can use the “ — inspect” option when you start the container to expose the Node.js debugger port, which you can then connect to 
+the host machine using a debugger client.
+
+33. You have a Docker container running a Java application and you want to monitor the application’s JVM. How would you do it?
+To monitor a Java application running in a Docker container, you can use a Java profiler like VisualVM or JProfiler. 
+You can use the “ — jvm” option when you start the container to expose the JVM port, which you can then connect to 
+from the host machine using the profiler client.
+
+34. You want to deploy a Docker container to a serverless platform like AWS Lambda. How would you do it?
+To deploy a Docker container to AWS Lambda, you can use AWS Fargate, which allows you to run Docker containers in a serverless environment. 
+You can use AWS ECS to create a task definition for the Docker container and then use AWS Lambda to run the task definition.
+
+35. You have a Docker container running a MongoDB database and you want to backup the data. How would you do it?
+To backup a MongoDB database running in a Docker container, you can use the mongodump command to create a backup of the database files. 
+You can then copy the backup files to the host machine or another container using a bind mount or a Docker volume.
+
+36. You have a Docker container running a MySQL database and you want to scale the database horizontally. How would you do it?
+To scale a MySQL database horizontally, you can use Docker Swarm to orchestrate multiple containers running the MySQL image. You can use the “ — replicas” option 
+when you create a Docker service to specify the number of replicas to run, and Docker Swarm will automatically distribute the load across the containers. 
+You can also use a load balancer like HAProxy to balance the traffic between the containers.
+
 
